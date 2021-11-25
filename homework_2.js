@@ -1,26 +1,25 @@
-console.log("кот" > "код")
-console.log("2" + 2 * "2")
-console.log(undefined == null)
-console.log(undefined === null)
-console.log(null == 0)
-console.log(2 > "3")
-console.log(null - false + true)
-console.log(1 / "l")
-console.log("2" * "3")
-console.log(4 + 5 + "O")
-console.log("l" + 4 + 5)
-console.log("4" - 2)
-console.log("4" - "4x")
-console.log(null == false)
-console.log(" -4 "/ 0 + 1)
-console.log(null + 1)
-console.log(undefined + null)
-
+console.log("кот" > "код");
+console.log("2" + 2 * "2");
+console.log(undefined == null);
+console.log(undefined === null);
+console.log(null == 0);
+console.log(2 > "3");
+console.log(null - false + true);
+console.log(1 / "l");
+console.log("2" * "3");
+console.log(4 + 5 + "O");
+console.log("l" + 4 + 5);
+console.log("4" - 2);
+console.log("4" - "4x");
+console.log(null == false);
+console.log(" -4 " / 0 + 1);
+console.log(null + 1);
+console.log(undefined + null);
 
 // Мои ответы; пояснения
 
 // 1. true;  в алфавите буква Т идёт после Д, поэтому "кот" тяжелее
-// 2. 44; (ответил неправильно) Сначала идёт умножение, потом конкатенация 
+// 2. 44; (ответил неправильно) Сначала идёт умножение, потом конкатенация
 // 3. true;
 // 4. false;
 // 5. true; (ответил неправильно) по факту false, т.к по алгоритму сравнения мы не подходим к каким-либо условиям
@@ -37,5 +36,3 @@ console.log(undefined + null)
 // 15. infinity; (ответил неправильно) будет -infinity, -4 / 0 = - infinity
 // 16. 1;  0 + 1 = 1
 // 17. NaN;  необъявленное значение + 0 = NaN
-
-
