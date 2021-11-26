@@ -227,11 +227,11 @@ if (month == 12 || (month >= 1 && month <= 2)) {
 console.log("V.3.");
 
 for (let i = 1; i <= 100; i++) {
-  if (i % 3 == 0 && i % 5 == 0) {
+  if (i % 3 === 0 && i % 5 === 0) {
     console.log("FizzBuzz");
-  } else if (i % 3 == 0) {
+  } else if (i % 3 === 0) {
     console.log("Fizz");
-  } else if (i % 5 == 0) {
+  } else if (i % 5 === 0) {
     console.log("Buzz");
   } else {
     console.log(i);
@@ -276,4 +276,161 @@ if (+str[0] + +str[1] + +str[2] == +str[3] + +str[4] + +str[5]) {
   console.log("Да");
 } else {
   console.log("Нет");
+}
+
+// =========== VI.Циклы while и for ===========
+// Решите эти задачи сначала через цикл while, а затем через цикл for.
+
+// 1.Выведите столбец чисел от 1 до 100.
+console.log("VI.1.While:");
+
+let i = 1;
+while (i <= 100) {
+  console.log(i);
+  i = i + 1;
+}
+
+console.log("VI.1.for:");
+
+for (i = 1; i <= 100; i++) {
+  console.log(i);
+}
+
+// 2.Выведите столбец чисел от 11 до 33.
+console.log("VI.2.While:");
+
+i = 11;
+while (i <= 33) {
+  console.log(i);
+  i = i + 1;
+}
+
+console.log("VI.2.for:");
+
+for (i = 11; i <= 33; i++) {
+  console.log(i);
+}
+
+// 3.  Выведите столбец четных чисел в промежутке от 0 до 100.
+
+console.log("VI.3.While:");
+
+i = 0;
+
+while (i <= 100) {
+  if (i % 2 === 0) {
+    console.log(i);
+  }
+  i = i + 1;
+}
+
+console.log("VI.3.for:");
+
+for (i = 0; i <= 100; i++) {
+  if (i % 2 === 0) {
+    console.log(i);
+  }
+}
+
+// 4.  С помощью цикла найдите сумму чисел от 1 до 100.
+console.log("VI.4.while.");
+
+sum = 0;
+i = 0;
+while (i <= 100) {
+  sum = sum + i;
+  i = i + 1;
+}
+console.log(sum);
+
+sum = 0;
+
+console.log("VI.4.for.");
+for (i = 1; i <= 100; i++) {
+  sum = sum + i;
+}
+console.log(sum);
+
+// 5. Найти факториал введенного числа(использовать prompt).
+console.log("VI.5.while");
+num = 5;
+result = 1;
+i = num;
+
+while (i !== 0) {
+  result = result * i;
+  i = i - 1;
+}
+console.log(result);
+
+console.log("VI.5.for");
+num = 5;
+result = 1;
+
+for (let i = num; i !== 0; i--) {
+  result = result * i;
+}
+console.log(result);
+// // 6. Дано число 5. Вывести в консоль число 555555555, не используя вычислений.
+console.log("VI.6.while");
+
+num = 5;
+result = "";
+i = 0;
+while (i < 9) {
+  result = result + num;
+  i = i + 1;
+}
+console.log(result);
+
+console.log("VI.6.for");
+
+num = 5;
+result = "";
+
+for (i = 0; i < 9; i++) {
+  result = result + num;
+}
+console.log(result);
+
+// 7.Перебрать числа от 0 до 300. Если  число четное, делится на 12 без остатка и не равно 48,
+// а результат деления на 12 нечетный, то вывести строку “Ooops”. Если число нечетное и делится на 3,
+// то вывести “Hola”. Если значение ноль, то вывести “Zero” (без использования сравнения).
+console.log("VI.7.while.");
+
+i = 0;
+
+while (i <= 300) {
+  if (!i) {
+    console.log("Zero", i);
+  } else if (i % 2 !== 0 && i % 3 === 0) {
+    console.log("Holla", i);
+  } else if (
+    i % 2 === 0 &&
+    i % 12 === 0 &&
+    i !== 48 &&
+    (i / 12) % 2 !== 0 &&
+    i !== 0
+  ) {
+    console.log("Ooops", i);
+  }
+  i = i + 1;
+}
+
+console.log("VI.7.for.");
+
+for (i = 0; i <= 300; i++) {
+  if (!i) {
+    console.log("Zero", i);
+  } else if (i % 2 !== 0 && i % 3 === 0) {
+    console.log("Holla", i);
+  } else if (
+    i % 2 === 0 &&
+    i % 12 === 0 &&
+    i !== 48 &&
+    (i / 12) % 2 !== 0 &&
+    i !== 0
+  ) {
+    console.log("Ooops", i);
+  }
 }
