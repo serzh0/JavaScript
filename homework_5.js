@@ -77,7 +77,7 @@ console.log("Задание 6:"); // работает только с латин
 let str5 = "every., -/ hunter #! wishes ;: {} to $ % ^ & * know";
 
 function remove_char(str5) {
-  return str5.replaceAll(/[^\w\s\d]/g, "");
+  return str5.replace(/[^\w\s\d]/g, "");
 }
 
 console.log(remove_char(str5));
@@ -114,7 +114,7 @@ console.log(comparison("Привет", "привет"));
 // 9. Поиск без учета регистра
 // Напишите функцию insensitive_search(str1, str2), которая осуществляет поиск подстроки str2 в строке str1
 //  без учёта регистра символов.
-console.log("Задание: 9");
+console.log("Задание 9:");
 
 function insensitive_search(str1, str2) {
   return str1.toLowerCase().includes(str2.toLowerCase());
@@ -125,7 +125,7 @@ console.log(insensitive_search("Добрый вечер", "ДОБРЫЙ"));
 // 10. ВерблюжийРегистр (CamelCase)
 // Напишите функцию initCap(str), которая преобразует стиль написания составных слов строки в CamelCase,
 // при котором несколько слов пишутся слитно без пробелов, при этом каждое слово внутри строки пишется с заглавной буквы.
-console.log("Задание: 10");
+console.log("Задание 10:");
 
 str = "hEllo world";
 function initCap(str) {
@@ -142,7 +142,7 @@ console.log(initCap(str));
 // 11. Змеиный_регистр (snake_case)
 // Напишите функцию initSnake(str), которая преобразует стиль написания составных слов строки из CamelCase в snake_case,
 // при котором несколько слов разделяются символом подчеркивания (_), причём каждое слово пишется с маленькой буквы.
-console.log("Задание: 11");
+console.log("Задание 11:");
 
 str = "HelloWorld";
 
@@ -152,9 +152,64 @@ str = "HelloWorld";
 
 // 12. Повторить строку n раз
 // Напишите функцию repeatStr(str, n), которая вовращает строку повторяемую определённое количество раз.
-console.log("Задание: 12");
+console.log("Задание 12:");
 
 function repeatStr(str, n) {
   return `${str.repeat(n)}`;
 }
 console.log(repeatStr(str, 4));
+
+// 13. Получить имя файла
+// Напишите функцию path(pathname), которая вовращает имя файла (подстрока после последнего символа "\" ) из полного пути к файлу.
+console.log("Задание 13:");
+
+let pathname = "/home/user/dir/file.txt";
+
+function path(pathname) {
+  return pathname.slice(pathname.lastIndexOf("/") + 1, pathname.length);
+}
+
+console.log(path(pathname));
+
+// 14. Заканчивается ли строка символами другой строки
+// Создайте метод объекта String endsWith(), который сравнивает подстроку str1 с окончанием исходной строки str и
+// определяет заканчивается ли строка символами подстроки.
+console.log("Задание 14:");
+
+str = "Каждый охотник желает знать";
+str1 = "скрипт";
+str2 = "знать";
+
+String.endsWith = function (substring) {
+  return str.endsWith(substring);
+};
+
+console.log(String.endsWith(str2));
+
+// 15. Подстрока до/после указанного символа
+// Напишите функцию getSubstr(str, char, pos), которая возвращает часть строки,
+//расположенную после или до указанного символа char(символ) в зависимости от параметра pos(до/после).
+console.log("Задание 15:");
+
+str = "Астрономия — Наука о небесных телах";
+
+function getSubstr(str, char, pos) {
+  if (pos === "До") {
+    return str.slice(0, str.indexOf(char));
+  } else if (pos === "После") {
+    return str.slice(str.indexOf(char) + 1, str.length);
+  }
+}
+console.log(getSubstr(str, "Н", "После"));
+
+// 16. Вставить подстроку в указанную позицию строки
+// Напишите функцию insert(str, substr, pos), которая вставляет подстроку substr в указханную позицию pos(indexOf(pos,0)) строки str.
+//  По умолчанию подстрока вставляется в начало строки.
+console.log("Задание 16:");
+
+str = "Hello world";
+substr = "perfect";
+function insert(str, substr, pos = 0) {
+  return str.slice(0, pos) + substr + str.slice(pos, str.length);
+}
+console.log(insert(str, substr, 6));
