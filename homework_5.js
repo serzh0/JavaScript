@@ -203,12 +203,12 @@ function getSubstr(str, char, pos) {
 console.log(getSubstr(str, "Н", "После"));
 
 // 16. Вставить подстроку в указанную позицию строки
-// Напишите функцию insert(str, substr, pos), которая вставляет подстроку substr в указханную позицию pos(indexOf(pos,0)) строки str.
+// Напишите функцию insert(str, substr, pos), которая вставляет подстроку substr в указанную позицию pos строки str.
 //  По умолчанию подстрока вставляется в начало строки.
 console.log("Задание 16:");
 
 str = "Hello world";
-substr = "perfect";
+let substr = "perfect";
 function insert(str, substr, pos = 0) {
   return str.slice(0, pos) + substr + str.slice(pos, str.length);
 }
