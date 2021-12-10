@@ -361,34 +361,18 @@ console.log("Задание 28:");
 // 31. Написать функцию, которая принимает число от 1 до 7 и возвращает день недели. Решить с помощью объектов.
 console.log("Задание 31:");
 
-num = 5;
-
 someObj = {
-  Monday: "Понедельник",
-  Tuesday: "Вторник",
-  Wednesday: "Среда",
-  Thursday: "Четверг",
-  Friday: "Пятница",
-  Saturday: "Суббота",
-  Sunday: "Воскресенье",
+  1: "Понедельник",
+  2: "Вторник",
+  3: "Среда",
+  4: "Четверг",
+  5: "Пятница",
+  6: "Суббота",
+  7: "Воскресенье",
 };
 
 let someFunc = (num) => {
-  if (num === 1) {
-    return someObj.Monday;
-  } else if (num === 2) {
-    return someObj.Tuesday;
-  } else if (num === 3) {
-    return someObj.Wednesday;
-  } else if (num === 4) {
-    return someObj.Thursday;
-  } else if (num === 5) {
-    return someObj.Friday;
-  } else if (num === 6) {
-    return someObj.Saturday;
-  } else if (num === 7) {
-    return someObj.Sunday;
-  }
+  return someObj[num];
 };
 
-console.log(someFunc(1));
+console.log(someFunc(7));
